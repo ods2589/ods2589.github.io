@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic meta info
+  ==================== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stop malbaratament alimentari</title>
+
+  <!-- Favicon
+  ============ -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
+
+  <!-- CSS files
+  ============== -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"  />
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+  <!-- Modernizr file
+  =================== -->
+  <script charset="utf-8" type="text/javascript "src="js/modernizr.custom.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Splash Screen
+  ================== -->
+  <div id="splash"></div>
+
+  <!-- Website Logo
+  ================= -->
+  <section id="logo">
+    <div class="container text-center wow pulse">
+      <img src="images/logo-white.svg" alt="logo" />
+      <br />
+      <h1>Stop malbaratament alimentari!</h1>
+    </div>
+  </section>
+
+  <!-- Recipes Categories
+  ======================= -->
+  <section id="categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Categories</h2>
+        </div>
+      </div>
+      <div class="row wow zoomIn">
+        <!-- Breakfast - Category Item -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="breakf">
+          <div class="category-item text-center">
+            <img src="images/icons/milk.png" alt="milk" width="48" height="48" />
+            <br />
+            Esmorzar
+          </div>
+        </div>
+        <!-- Meat - Category Item -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="meat">
+          <div class="category-item text-center">
+            <img src="images/icons/steak.png" alt="meat" width="48" height="48" />
+            <br />
+            Carn
+          </div>
+        </div>
+        <!-- Seafood - Category Item -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="mariscs">
+          <div class="category-item text-center">
+            <img src="images/icons/fish.png" alt="fish" width="48" height="48" />
+            <br />
+            Mariscs
+          </div>
+        </div>
+        <!-- Snacks- Category Item -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="snaks">
+          <div class="category-item text-center">
+            <img src="images/icons/peanuts.png" alt="peanuts" width="48" height="48"/>
+            <br />
+            Aperitius
+          </div>
+        </div>
+        <!-- Spicy - Category Item -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="spicy">
+          <div class="category-item text-center">
+            <img src="images/icons/chili.png" alt="chili" width="48" height="48" />
+            <br />
+            Picants
+          </div>
+        </div>
+        <!-- Vegetarian - Category Item -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6" id="veggy">
+          <div class="category-item text-center">
+            <img src="images/icons/vegan.png" alt="vegan" width="48" height="48" />
+            <br />
+            Vegetarianes
+          </div>
+        </div>
+      </div>
+      <div class="row wow zoomIn" id="recipesAll">
+        <div class="col-12 text-center show-all">
+          <div class="category-item text-center">
+            <i class="fa fa-cutlery fa-2x" aria-hidden="true"></i>
+            <br />
+            Totes les receptes
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  var veggy = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="amanida.html">
+              <img src="images/amanida_llegums.jpeg" alt="amanida llegums" style='height:200px' />
+            </a>
+            <br />
+            <h3>Amanida de llegums</h3>
+          </div>
+        </div>
+`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="hmbarros.html">
+              <img src="images/hmb_arros.jpg" alt="arros" style='height:200px' />
+            </a>
+            <br />
+            <h3>Hamburguesa d'arròs</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="croquetes.html">
+              <img src="images/croquetes.jpeg" alt="croquetes" style='height:200px' />
+            </a>
+            <br />
+            <h3>Croquetes de bledes</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="pate.html">
+              <img src="images/pate.jpg" alt="pate" style='height:200px' />
+            </a>
+            <br />
+            <h3>Paté llenties i carbassa</h3>
+          </div>
+        </div>`]
+  var recipes = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="amanida.html">
+              <img src="images/amanida_llegums.jpeg" alt="amanida llegums" style='height:200px' />
+            </a>
+            <br />
+            <h3>Amanida de llegums</h3>
+          </div>
+        </div>
+`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="civadafruites.html">
+              <img src="images/civada_fruites.jpg" alt="fruites" style='height:200px' />
+            </a>
+            <br />
+            <h3>Civada i fruites</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="hmbarros.html">
+              <img src="images/hmb_arros.jpg" alt="arros" style='height:200px' />
+            </a>
+            <br />
+            <h3>Hamburguesa d'arròs</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="pizza.html">
+              <img src="images/pizza_casera.jpg" alt="pizza" style='height:200px' />
+            </a>
+            <br />
+            <h3>Pizza casolana</h3>
+          </div>
+        </div>`, , `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="seitons.html">
+              <img src="images/seitons.jpg" alt="seitons" style='height:200px' />
+            </a>
+            <br />
+            <h3>Seitons farcits</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="croquetes.html">
+              <img src="images/croquetes.jpeg" alt="croquetes" style='height:200px' />
+            </a>
+            <br />
+            <h3>Croquetes de bledes</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="pebrots.html">
+              <img src="images/pebrots.jpg" alt="pebrots" style='height:200px' />
+            </a>
+            <br />
+            <h3>Pebrots farcits</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="peixpesols.html">
+              <img src="images/peixpesols.jpg" alt="peixpesols" style='height:200px' />
+            </a>
+            <br />
+            <h3>Pastis de peix i pesols</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="pate.html">
+              <img src="images/pate.jpg" alt="pate" style='height:200px' />
+            </a>
+            <br />
+            <h3>Paté llenties i carbassa</h3>
+          </div>
+        </div>`]
+        var breakfast = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="civadafruites.html">
+              <img src="images/civada_fruites.jpg" alt="fruites" style='height:200px' />
+            </a>
+            <br />
+            <h3>Civada i fruites</h3>
+          </div>
+        </div>`]
+        var meat = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="hmbarros.html">
+              <img src="images/hmb_arros.jpg" alt="arros" style='height:200px' />
+            </a>
+            <br />
+            <h3>Hamburguesa d'arròs</h3>
+          </div>
+        </div>`]
+        var mariscs = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="peixpesols.html">
+              <img src="images/peixpesols.jpg" alt="peixpesols" style='height:200px' />
+            </a>
+            <br />
+            <h3>Pastis de peix i pesols</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="seitons.html">
+              <img src="images/seitons.jpg" alt="seitons" style='height:200px' />
+            </a>
+            <br />
+            <h3>Seitons farcits</h3>
+          </div>
+        </div>`]
+        var spicy = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="pebrots.html">
+              <img src="images/pebrots.jpg" alt="pebrots" style='height:200px' />
+            </a>
+            <br />
+            <h3>Pebrots farcits</h3>
+          </div>
+        </div>`]
+        var snaks = [`<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="croquetes.html">
+              <img src="images/croquetes.jpeg" alt="croquetes" style='height:200px' />
+            </a>
+            <br />
+            <h3>Croquetes de bledes</h3>
+          </div>
+        </div>`, `<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn">
+          <div class="recipe-item text-center">
+            <a href="pate.html">
+              <img src="images/pate.jpg" alt="pate" style='height:200px' />
+            </a>
+            <br />
+            <h3>Paté llenties i carbassa</h3>
+          </div>
+        </div>`]
+        document.getElementById("recipesAll").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          recipes.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+        document.getElementById("spicy").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          spicy.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+        document.getElementById("meat").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          meat.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+        document.getElementById("breakf").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          breakfast.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+        document.getElementById("mariscs").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          mariscs.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+        document.getElementById("snaks").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          snaks.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+        document.getElementById("veggy").addEventListener("click", () => {
+          document.getElementById("recipes").innerHTML = ""
+          veggy.forEach((b) => {
+            document.getElementById("recipes").innerHTML += b
+          })
+        })
+  recipes.forEach((recipe) => {
+    document.getElementById("recipes").innerHTML += recipe
+  })
+})
+</script>
+
+  <!-- Recipes Items
+  ================== -->
+  <section id="items">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Receptes</h2>
+        </div>
+      </div>
+      <div class="row" id="recipes">
+      </div>
+    </div>
+  </section>
+
+  <!-- Website Footer
+  =================== -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- About -->
+        <div class="col-md-6 col-sm-12 text-center mx-auto">
+          <h3>Sobre nosaltres</h3>
+          <div class="footer-about">
+            Som el Biel Riu, el Tomàs Rubí, el Bru Folch, el Jordi Corral i el Bernat Figuerola i pensem que el malbaratament alimentari es un gran problema actualment, amb aquestes receptes esperem poder reduir aquest malbaratament.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript files
+  ===================== -->
+  <script charset="utf-8" src="js/jquery-3.3.1.min.js"></script>
+  <script charset="utf-8" src="js/bootstrap.min.js"></script>
+  <script charset="utf-8" src="js/wow.min.js"></script>
+  <script charset="utf-8" src="js/scripts.js"></script>
+</body>
+
+</html>
